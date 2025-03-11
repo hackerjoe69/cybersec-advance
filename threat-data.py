@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 import sqlite3
+import time
 
 def collect_threat_data():
     # VirusTotal API key
