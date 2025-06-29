@@ -1,6 +1,6 @@
-from scapy.all import *
+from scapy.all import sniff
 
-def sniff_packets(interface):
+def start_sniffing(interface):
     # Define a callback function to process each captured packet
     def process_packet(packet):
         print(f"Packet captured: {packet.summary()}")
@@ -10,10 +10,10 @@ def sniff_packets(interface):
 
 def main():
     # Specify the network interface to sniff packets from
-    interface = 'eth0'
+    interface = 'wlan0'
 
     # Start sniffing packets
-    sniff_packets(interface)
+    start_sniffing(interface)
 
 if __name__ == '__main__':
     main()
